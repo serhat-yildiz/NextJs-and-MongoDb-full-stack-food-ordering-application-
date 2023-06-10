@@ -102,6 +102,7 @@ const Reservation = () => {
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3015.5385532842347!2d29.15337281541077!3d40.90393607931152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smarmara%20%C3%BCniversitesi%20dragos!5e0!3m2!1str!2str!4v1686294471338!5m2!1str!2str"
             width="600"
             height="450"
+            allowfullScreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
