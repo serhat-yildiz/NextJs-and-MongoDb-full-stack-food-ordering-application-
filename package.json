@@ -1,5 +1,5 @@
 {
-  "name": "food-ordering",
+  "name": "darthDevo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -37,5 +37,10 @@
     "eslint-config-next": "12.2.5",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
-  }
+  },
+  "description": "marmara fast food university final project",
+  "main": "index.js",
+  "repository": "https://github.com/darthDevo/Marmara-FF.git",
+  "author": "Serhat Yıldız <132045435+darthDevo@users.noreply.github.com>",
+  "license": "MIT"
 }
