@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import Input from "../../components/form/Input";
-import Title from "../../components/ui/Title";
-import { useFormik } from "formik";
-import { footerSchema } from "../../schema/footer";
-import axios from "axios";
-import { toast } from "react-toastify";
+import { useEffect, useState } from 'react';
+import Input from '../../components/form/Input';
+import Title from '../../components/ui/Title';
+import { useFormik } from 'formik';
+import { footerSchema } from '../../schema/footer';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Footer = () => {
-  const [iconName, setIconName] = useState("fa fa-");
-  const [linkAddress, setLinkAddress] = useState("https://");
+  const [iconName, setIconName] = useState('fa fa-');
+  const [linkAddress, setLinkAddress] = useState('https://');
   const [footerData, setFooterData] = useState([]);
   const [socialMediaLinks, setSocialMediaLinks] = useState([]);
 
@@ -44,78 +44,84 @@ const Footer = () => {
         }
       );
       if (res.status === 200) {
-        toast.success("Footer updated successfully");
+        toast.success('Footer updated successfully');
       }
     } catch (err) {
       console.log(err);
     }
   };
 
-  const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
-    useFormik({
-      enableReinitialize: true,
-      initialValues: {
-        location: footerData?.location,
-        email: footerData?.email,
-        phoneNumber: footerData?.phoneNumber,
-        desc: footerData?.desc,
-        day: footerData?.openingHours?.day,
-        time: footerData?.openingHours?.hour,
-      },
-      onSubmit,
-      validationSchema: footerSchema,
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleSubmit,
+    handleChange,
+    handleBlur,
+  } = useFormik({
+    enableReinitialize: true,
+    initialValues: {
+      location: footerData?.location,
+      email: footerData?.email,
+      phoneNumber: footerData?.phoneNumber,
+      desc: footerData?.desc,
+      day: footerData?.openingHours?.day,
+      time: footerData?.openingHours?.hour,
+    },
+    onSubmit,
+    validationSchema: footerSchema,
+  });
   const inputs = [
     {
       id: 1,
-      name: "location",
-      type: "text",
-      placeholder: "Your Location",
+      name: 'location',
+      type: 'text',
+      placeholder: 'Your Location',
       value: values.location,
       errorMessage: errors.location,
       touched: touched.location,
     },
     {
       id: 2,
-      name: "email",
-      type: "text",
-      placeholder: "Your Email",
+      name: 'email',
+      type: 'text',
+      placeholder: 'Your Email',
       value: values.email,
       errorMessage: errors.email,
       touched: touched.email,
     },
     {
       id: 3,
-      name: "phoneNumber",
-      type: "number",
-      placeholder: "Your Phone Number",
+      name: 'phoneNumber',
+      type: 'number',
+      placeholder: 'Your Phone Number',
       value: values.phoneNumber,
       errorMessage: errors.phoneNumber,
       touched: touched.phoneNumber,
     },
     {
       id: 4,
-      name: "desc",
-      type: "text",
-      placeholder: "Your Description",
+      name: 'desc',
+      type: 'text',
+      placeholder: 'Your Description',
       value: values.desc,
       errorMessage: errors.desc,
       touched: touched.desc,
     },
     {
       id: 5,
-      name: "day",
-      type: "text",
-      placeholder: "Update Day",
+      name: 'day',
+      type: 'text',
+      placeholder: 'Update Day',
       value: values.day,
       errorMessage: errors.day,
       touched: touched.day,
     },
     {
       id: 6,
-      name: "time",
-      type: "text",
-      placeholder: "Update Time",
+      name: 'time',
+      type: 'text',
+      placeholder: 'Update Time',
       value: values.time,
       errorMessage: errors.time,
       touched: touched.time,
@@ -130,8 +136,8 @@ const Footer = () => {
         link: linkAddress,
       },
     ]);
-    setLinkAddress("https://");
-    setIconName("fa fa-");
+    setLinkAddress('https://');
+    setIconName('fa fa-');
   };
   return (
     <form className="lg:p-8 flex-1 lg:mt-0 mt-5" onSubmit={handleSubmit}>

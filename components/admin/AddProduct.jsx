@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import OutsideClickHandler from "react-outside-click-handler";
-import Title from "../ui/Title";
-import { GiCancel } from "react-icons/gi";
-import axios from "axios";
-import { toast } from "react-toastify";
+import React, { useEffect, useState } from 'react';
+import OutsideClickHandler from 'react-outside-click-handler';
+import Title from '../ui/Title';
+import { GiCancel } from 'react-icons/gi';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const AddProduct = ({ setIsProductModal }) => {
   const [file, setFile] = useState();
   const [imageSrc, setImageSrc] = useState();
 
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
-  const [category, setCategory] = useState("pizza");
+  const [title, setTitle] = useState('');
+  const [desc, setDesc] = useState('');
+  const [category, setCategory] = useState('pizza');
   const [prices, setPrices] = useState([]);
 
-  const [extra, setExtra] = useState("");
+  const [extra, setExtra] = useState('');
   const [extraOptions, setExtraOptions] = useState([]);
 
   const [categories, setCategories] = useState([]);
@@ -60,12 +60,12 @@ const AddProduct = ({ setIsProductModal }) => {
 
   const handleCreate = async () => {
     const data = new FormData();
-    data.append("file", file);
-    data.append("upload_preset", "food-ordering");
+    data.append('file', file);
+    data.append('upload_preset', 'food-ordering');
 
     try {
       const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/bilgisayar-genetigi/image/upload",
+        'https://api.cloudinary.com/v1_1/bilgisayar-genetigi/image/upload',
         data
       );
 
@@ -86,7 +86,7 @@ const AddProduct = ({ setIsProductModal }) => {
 
       if (res.status === 201) {
         setIsProductModal(false);
-        toast.success("Product created successfully!");
+        toast.success('Product created successfully!');
       }
     } catch (err) {
       console.log(err);
@@ -161,7 +161,7 @@ const AddProduct = ({ setIsProductModal }) => {
 
             <div className="flex flex-col text-sm mt-4 w-full">
               <span className="font-semibold mb-[2px]">Prices</span>
-              {category === "pizza" ? (
+              {category === 'pizza' ? (
                 <div className="flex justify-between gap-6 w-full md:flex-nowrap flex-wrap">
                   <input
                     type="number"

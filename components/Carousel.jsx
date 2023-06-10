@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Title from "./ui/Title";
-import Slider from "react-slick";
+import Image from 'next/image';
+import Title from './ui/Title';
+import Slider from 'react-slick';
 
 const Carousel = () => {
   const settings = {
@@ -38,26 +38,28 @@ const Carousel = () => {
       <Slider {...settings}>
         <div>
           <div className="mt-48 container mx-auto  text-white flex flex-col items-start gap-y-8">
-            <Title addClass="text-5xl">Fast Food Restaurant</Title>
+            <Title addClass="text-5xl">Marmara Uni Fast Food</Title>
             <p className="text-sm sm:w-2/5 w-full">
-              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
-              sapiente ad mollitia laborum quam quisquam esse error unde.
-              Tempora ex doloremque, labore, sunt repellat dolore, iste magni
-              quos nihil ducimus libero ipsam.
+              Araştırma yaparken karnınız mı acıktı? Marmara Üniversitesi Fast
+              Food, lezzetli ve hızlı yemekler sunan birinci sınıf bir
+              seçenektir. Öğrenci dostu menümüz, zengin çeşitliliği ve uygun
+              fiyatlarıyla dikkat çekmektedir.
             </p>
-            <button className="btn-primary">Order Now</button>
+            <button className="btn-primary">şimdi sipariş ver</button>
           </div>
         </div>
         <div>
           <div className="mt-48 container mx-auto  text-white flex flex-col items-start gap-y-8">
-            <Title addClass="text-5xl">Fast Food Restaurant</Title>
+            <Title addClass="text-5xl">Kaliteli malzemeler </Title>
             <p className="text-sm sm:w-2/5 w-full">
-              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
-              sapiente ad mollitia laborum quam quisquam esse error unde.
-              Tempora ex doloremque, labore, sunt repellat dolore, iste magni
-              quos nihil ducimus libero ipsam.
+              Kaliteli malzemeler kullanarak hazırlanan menümüzde, hamburgerler,
+              sandviçler, pizzalar, makarnalar ve daha birçok lezzetli seçenek
+              bulunmaktadır. Her damak zevkine hitap eden çeşitler arasında,
+              vegan ve vejetaryen alternatifler de bulunmaktadır. Sağlıklı
+              beslenmeye önem verenler için taze salatalar ve meyve tabakları da
+              sunuyoruz.
             </p>
-            <button className="btn-primary">Order Now</button>
+            <button className="btn-primary">şimdi sipariş ver</button>
           </div>
         </div>
       </Slider>

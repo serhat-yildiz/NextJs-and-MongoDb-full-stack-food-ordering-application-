@@ -1,10 +1,10 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import Input from "../form/Input";
-import Title from "../ui/Title";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Input from '../form/Input';
+import Title from '../ui/Title';
 
 const Category = () => {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Category = () => {
         { title: inputText }
       );
       setCategories([...categories, res.data]);
-      setInputText("");
+      setInputText('');
     } catch (err) {
       console.log(err);
     }
@@ -37,7 +37,7 @@ const Category = () => {
   const handleDelete = async (e, id) => {
     e.preventDefault();
     try {
-      if (confirm("Are you sure you want to delete this category?")) {
+      if (confirm('Are you sure you want to delete this category?')) {
         await axios.delete(
           `${process.env.NEXT_PUBLIC_API_URL}/categories/${id}`
         );

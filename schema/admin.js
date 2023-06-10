@@ -1,10 +1,10 @@
-import * as Yup from "yup";
+import * as Yup from 'yup';
 
 export const adminSchema = Yup.object({
   username: Yup.string()
-    .required("Username is required.")
-    .min(3, "Username must be at least 3 characters."),
+    .required('Kullanıcı adı zorunludur.')
+    .min(3, 'Kullanıcı adı en az 3 karakter olmalıdır.'),
   password: Yup.string()
-    .required("Password is required.")
-    .min(5, "Password must be at least 5 characters."),
+    .required('Şifre zorunludur.')
+    .min(5, 'Şifre en az 5 karakter olmalıdır.'),
 });

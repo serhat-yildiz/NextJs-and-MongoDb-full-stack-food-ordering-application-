@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Title from "./ui/Title";
-import { MdShoppingCart } from "react-icons/md";
+import Image from 'next/image';
+import Title from './ui/Title';
+import { MdShoppingCart } from 'react-icons/md';
 
 const CampaignItem = () => {
   return (
@@ -16,13 +16,13 @@ const CampaignItem = () => {
         />
       </div>
       <div className="text-white">
-        <Title addClass="text-2xl">Tasty Thursdays</Title>
+        <Title addClass="text-2xl">lezzetli perşembeler</Title>
         <div className="font-dancing my-1">
           <span className="text-[40px]">20%</span>
-          <span className="text-sm inline-block ml-1">Off</span>
+          <span className="text-sm inline-block ml-1">Kapalı</span>
         </div>
         <button className="btn-primary flex items-center gap-x-2">
-          Order Now <MdShoppingCart size={20} />
+          şimdi sipariş ver <MdShoppingCart size={20} />
         </button>
       </div>
     </div>

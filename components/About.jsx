@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Title from "./ui/Title";
+import Image from 'next/image';
+import Title from './ui/Title';
 
 const About = () => {
   return (
@@ -11,16 +11,19 @@ const About = () => {
           </div>
         </div>
         <div className="md:w-1/2 ">
-          <Title addClass="text-[40px]">We Are Feane</Title>
+          <Title addClass="text-[40px]">Biz Marmara üniversitesiyiz</Title>
           <p className="my-5 flex flex-col items-center">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don`t look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn`t anything embarrassing hidden in the
-            middle of text. All
+            Araştırma yaparken karnınız mı acıktı? Marmara Üniversitesi Fast
+            Food, lezzetli ve hızlı yemekler sunan birinci sınıf bir seçenektir.
+            Öğrenci dostu menümüz, zengin çeşitliliği ve uygun fiyatlarıyla
+            dikkat çekmektedir. Kaliteli malzemeler kullanarak hazırlanan
+            menümüzde, hamburgerler, sandviçler, pizzalar, makarnalar ve daha
+            birçok lezzetli seçenek bulunmaktadır. Her damak zevkine hitap eden
+            çeşitler arasında, vegan ve vejetaryen alternatifler de
+            bulunmaktadır. Sağlıklı beslenmeye önem verenler için taze salatalar
+            ve meyve tabakları da sunuyoruz.
           </p>
-          <button className="btn-primary">Read More</button>
+          <button className="btn-primary">Devamını oku</button>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { useState } from "react";
-import Title from "../../components/ui/Title";
-import { addProduct } from "../../redux/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import Image from 'next/image';
+import { useState } from 'react';
+import Title from '../../components/ui/Title';
+import { addProduct } from '../../redux/cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 
 const Index = ({ food }) => {
   const [prices, setPrices] = useState(food.prices);
@@ -60,8 +60,8 @@ const Index = ({ food }) => {
         </span>
         <p className="text-sm my-4 md:pr-24">{food?.desc}</p>
         <div>
-          <h4 className="text-xl font-bold">Choose the size</h4>
-          {food.category === "pizza" && (
+          <h4 className="text-xl font-bold">Boyut seçin</h4>
+          {food.category === 'pizza' && (
             <div className="flex items-center gap-x-20 md:justify-start justify-center">
               <div
                 className="relative w-8 h-8 cursor-pointer"
@@ -69,7 +69,7 @@ const Index = ({ food }) => {
               >
                 <Image src="/images/size.png" alt="" layout="fill" />
                 <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
-                  Small
+                  küçük
                 </span>
               </div>
               <div
@@ -78,7 +78,7 @@ const Index = ({ food }) => {
               >
                 <Image src="/images/size.png" alt="" layout="fill" />
                 <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
-                  Medium
+                  orta
                 </span>
               </div>
               <div
@@ -87,7 +87,7 @@ const Index = ({ food }) => {
               >
                 <Image src="/images/size.png" alt="" layout="fill" />
                 <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
-                  Large
+                  büyük
                 </span>
               </div>
             </div>
@@ -110,7 +110,7 @@ const Index = ({ food }) => {
           onClick={handleClick}
           disabled={findCart}
         >
-          Add to Cart
+          Sepete Ekle
         </button>
       </div>
     </div>

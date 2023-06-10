@@ -1,11 +1,11 @@
-import axios from "axios";
-import { useFormik } from "formik";
-import Link from "next/link";
-import Input from "../../components/form/Input";
-import Title from "../../components/ui/Title";
-import { adminSchema } from "../../schema/admin";
-import { toast } from "react-toastify";
-import { useRouter } from "next/router";
+import axios from 'axios';
+import { useFormik } from 'formik';
+import Link from 'next/link';
+import Input from '../../components/form/Input';
+import Title from '../../components/ui/Title';
+import { adminSchema } from '../../schema/admin';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 const Login = () => {
   const { push } = useRouter();
@@ -19,38 +19,44 @@ const Login = () => {
       if (res.status === 200) {
         console.log(res.data);
         actions.resetForm();
-        toast.success("Admin Login Success!");
-        push("/admin/profile");
+        toast.success('Admin Login Success!');
+        push('/admin/profile');
       }
     } catch (err) {
       console.log(err);
     }
   };
-  const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
-    useFormik({
-      initialValues: {
-        username: "",
-        password: "",
-      },
-      onSubmit,
-      validationSchema: adminSchema,
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleSubmit,
+    handleChange,
+    handleBlur,
+  } = useFormik({
+    initialValues: {
+      username: '',
+      password: '',
+    },
+    onSubmit,
+    validationSchema: adminSchema,
+  });
 
   const inputs = [
     {
       id: 1,
-      name: "username",
-      type: "text",
-      placeholder: "Your Username",
+      name: 'username',
+      type: 'text',
+      placeholder: 'Your Username',
       value: values.username,
       errorMessage: errors.username,
       touched: touched.username,
     },
     {
       id: 2,
-      name: "password",
-      type: "password",
-      placeholder: "Your Password",
+      name: 'password',
+      type: 'password',
+      placeholder: 'Your Password',
       value: values.password,
       errorMessage: errors.password,
       touched: touched.password,
@@ -88,11 +94,11 @@ const Login = () => {
 };
 
 export const getServerSideProps = (ctx) => {
-  const myCookie = ctx.req?.cookies || "";
+  const myCookie = ctx.req?.cookies || '';
   if (myCookie.token === process.env.ADMIN_TOKEN) {
     return {
       redirect: {
-        destination: "/admin/profile",
+        destination: '/admin/profile',
         permanent: false,
       },
     };

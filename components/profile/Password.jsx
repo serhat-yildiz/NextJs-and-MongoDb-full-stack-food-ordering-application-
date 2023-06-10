@@ -1,10 +1,10 @@
-import React from "react";
-import Input from "../../components/form/Input";
-import Title from "../../components/ui/Title";
-import { useFormik } from "formik";
-import { registerSchema } from "../../schema/register";
-import { newPasswordSchema } from "../../schema/newPassword";
-import axios from "axios";
+import React from 'react';
+import Input from '../../components/form/Input';
+import Title from '../../components/ui/Title';
+import { useFormik } from 'formik';
+import { registerSchema } from '../../schema/register';
+import { newPasswordSchema } from '../../schema/newPassword';
+import axios from 'axios';
 
 const Password = ({ user }) => {
   const onSubmit = async (values, actions) => {
@@ -19,31 +19,37 @@ const Password = ({ user }) => {
     }
   };
 
-  const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
-    useFormik({
-      enableReinitialize: true,
-      initialValues: {
-        password: "",
-        confirmPassword: "",
-      },
-      onSubmit,
-      validationSchema: newPasswordSchema,
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleSubmit,
+    handleChange,
+    handleBlur,
+  } = useFormik({
+    enableReinitialize: true,
+    initialValues: {
+      password: '',
+      confirmPassword: '',
+    },
+    onSubmit,
+    validationSchema: newPasswordSchema,
+  });
   const inputs = [
     {
       id: 1,
-      name: "password",
-      type: "password",
-      placeholder: "Your Password",
+      name: 'password',
+      type: 'password',
+      placeholder: 'Your Password',
       value: values.password,
       errorMessage: errors.password,
       touched: touched.password,
     },
     {
       id: 2,
-      name: "confirmPassword",
-      type: "password",
-      placeholder: "Your Confirm Password",
+      name: 'confirmPassword',
+      type: 'password',
+      placeholder: 'Your Confirm Password',
       value: values.confirmPassword,
       errorMessage: errors.confirmPassword,
       touched: touched.confirmPassword,

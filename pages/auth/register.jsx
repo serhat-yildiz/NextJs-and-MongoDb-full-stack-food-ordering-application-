@@ -1,11 +1,11 @@
-import axios from "axios";
-import { useFormik } from "formik";
-import Link from "next/link";
-import Input from "../../components/form/Input";
-import Title from "../../components/ui/Title";
-import { registerSchema } from "../../schema/register";
-import { toast } from "react-toastify";
-import { useRouter } from "next/router";
+import axios from 'axios';
+import { useFormik } from 'formik';
+import Link from 'next/link';
+import Input from '../../components/form/Input';
+import Title from '../../components/ui/Title';
+import { registerSchema } from '../../schema/register';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 const Register = () => {
   const { push } = useRouter();
@@ -16,8 +16,8 @@ const Register = () => {
         values
       );
       if (res.status === 200) {
-        toast.success("User created successfully");
-        push("/auth/login");
+        toast.success('Hesabınız başarıyla oluşturuldu.');
+        push('/auth/login');
       }
     } catch (err) {
       toast.error(err.response.data.message);
@@ -25,51 +25,57 @@ const Register = () => {
     }
     actions.resetForm();
   };
-  const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
-    useFormik({
-      initialValues: {
-        fullName: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-      },
-      onSubmit,
-      validationSchema: registerSchema,
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleSubmit,
+    handleChange,
+    handleBlur,
+  } = useFormik({
+    initialValues: {
+      fullName: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    },
+    onSubmit,
+    validationSchema: registerSchema,
+  });
 
   const inputs = [
     {
       id: 1,
-      name: "fullName",
-      type: "text",
-      placeholder: "Your Full Name",
+      name: 'fullName',
+      type: 'text',
+      placeholder: 'Adınız Soyadınız',
       value: values.fullName,
       errorMessage: errors.fullName,
       touched: touched.fullName,
     },
     {
       id: 2,
-      name: "email",
-      type: "email",
-      placeholder: "Your Email Address",
+      name: 'email',
+      type: 'email',
+      placeholder: 'E-posta Adresiniz',
       value: values.email,
       errorMessage: errors.email,
       touched: touched.email,
     },
     {
       id: 3,
-      name: "password",
-      type: "password",
-      placeholder: "Your Password",
+      name: 'password',
+      type: 'password',
+      placeholder: 'Şifreniz',
       value: values.password,
       errorMessage: errors.password,
       touched: touched.password,
     },
     {
       id: 4,
-      name: "confirmPassword",
-      type: "password",
-      placeholder: "Your Password Again",
+      name: 'confirmPassword',
+      type: 'password',
+      placeholder: 'Şifreniz Tekrar',
       value: values.confirmPassword,
       errorMessage: errors.confirmPassword,
       touched: touched.confirmPassword,
@@ -82,7 +88,7 @@ const Register = () => {
         className="flex flex-col items-center my-20 md:w-1/2 w-full mx-auto"
         onSubmit={handleSubmit}
       >
-        <Title addClass="text-[40px] mb-6">Register</Title>
+        <Title addClass="text-[40px] mb-6">Kayıt ol</Title>
         <div className="flex flex-col gap-y-3 w-full">
           {inputs.map((input) => (
             <Input
@@ -95,11 +101,11 @@ const Register = () => {
         </div>
         <div className="flex flex-col w-full gap-y-3 mt-6">
           <button className="btn-primary" type="submit">
-            REGISTER
+            KAYIT OL
           </button>
           <Link href="/auth/login">
             <span className="text-sm underline cursor-pointer text-secondary">
-              Do you have a account?
+              Hesabınız var mı? Giriş yapın.
             </span>
           </Link>
         </div>

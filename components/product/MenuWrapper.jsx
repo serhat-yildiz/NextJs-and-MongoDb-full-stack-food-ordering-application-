@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import Title from "../ui/Title";
-import MenuItem from "./MenuItem";
+import { useEffect, useState } from 'react';
+import Title from '../ui/Title';
+import MenuItem from './MenuItem';
 
 const MenuWrapper = ({ categoryList, productList }) => {
   const [active, setActive] = useState(0);
@@ -19,13 +19,13 @@ const MenuWrapper = ({ categoryList, productList }) => {
   return (
     <div className="container mx-auto  mb-16">
       <div className="flex flex-col items-center w-full">
-        <Title addClass="text-[40px]">Our Menu</Title>
+        <Title addClass="text-[40px]">Menü</Title>
         <div className="mt-10">
           {categoryList &&
             categoryList.map((category, index) => (
               <button
                 className={`px-6 py-2  rounded-3xl ${
-                  index === active && "bg-secondary text-white"
+                  index === active && 'bg-secondary text-white'
                 }`}
                 key={category._id}
                 onClick={() => {
@@ -49,7 +49,7 @@ const MenuWrapper = ({ categoryList, productList }) => {
           className="btn-primary"
           onClick={() => setProductLimit(productLimit + 3)}
         >
-          View More
+          Tümünü Göster
         </button>
       </div>
     </div>

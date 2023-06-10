@@ -1,13 +1,13 @@
-import axios from "axios";
-import Image from "next/image";
+import axios from 'axios';
+import Image from 'next/image';
 
 const Order = ({ order }) => {
   const status = order?.status;
 
   const statusClass = (index) => {
-    if (index - status < 1) return "";
-    if (index - status === 1) return "animate-pulse";
-    if (index - status > 1) return "";
+    if (index - status < 1) return '';
+    if (index - status === 1) return 'animate-pulse';
+    if (index - status > 1) return '';
   };
   return (
     <div className="overflow-x-auto">
@@ -20,13 +20,13 @@ const Order = ({ order }) => {
                   ORDER ID
                 </th>
                 <th scope="col" className="py-3 px-6">
-                  CUSTOMER
+                  MÜŞTERİ
                 </th>
                 <th scope="col" className="py-3 px-6">
-                  ADDRESS
+                  ADRES
                 </th>
                 <th scope="col" className="py-3 px-6">
-                  TOTAL
+                  TUTAR
                 </th>
               </tr>
             </thead>
@@ -57,7 +57,7 @@ const Order = ({ order }) => {
               height={40}
               objectFit="contain"
             />
-            <span>Payment</span>
+            <span>Ödeme</span>
           </div>
           <div className={`relative flex flex-col ${statusClass(1)}`}>
             <Image
@@ -67,7 +67,7 @@ const Order = ({ order }) => {
               height={40}
               objectFit="contain"
             />
-            <span>Preparing</span>
+            <span>hazırlanıyor</span>
           </div>
           <div className={`relative flex flex-col ${statusClass(2)}`}>
             <Image
@@ -77,7 +77,7 @@ const Order = ({ order }) => {
               height={40}
               objectFit="contain"
             />
-            <span>On the way</span>
+            <span>Yolda</span>
           </div>
           <div className={`relative flex flex-col ${statusClass(3)}`}>
             <Image
@@ -87,7 +87,7 @@ const Order = ({ order }) => {
               height={40}
               objectFit="contain"
             />
-            <span>Delivered</span>
+            <span>Teslim edilmiş</span>
           </div>
         </div>
       </div>

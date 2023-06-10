@@ -1,12 +1,12 @@
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import OutsideClickHandler from "react-outside-click-handler";
-import Title from "../ui/Title";
-import { GiCancel } from "react-icons/gi";
-import axios from "axios";
-import Input from "../form/Input";
-import { useRouter } from "next/router";
-import PacmanLoader from "react-spinners/PacmanLoader";
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import OutsideClickHandler from 'react-outside-click-handler';
+import Title from '../ui/Title';
+import { GiCancel } from 'react-icons/gi';
+import axios from 'axios';
+import Input from '../form/Input';
+import { useRouter } from 'next/router';
+import PacmanLoader from 'react-spinners/PacmanLoader';
 
 const Search = ({ setIsSearchModal }) => {
   const [products, setProducts] = useState([]);
@@ -44,7 +44,7 @@ const Search = ({ setIsSearchModal }) => {
       <OutsideClickHandler onOutsideClick={() => setIsSearchModal(false)}>
         <div className="w-full h-full grid place-content-center relative">
           <div className="relative z-50 md:w-[600px] w-[370px]  bg-white border-2 p-10 rounded-3xl">
-            <Title addClass="text-[40px] text-center">Search</Title>
+            <Title addClass="text-[40px] text-center">Ürün ara</Title>
             <Input placeholder="Search..." onChange={handleSearch} />
             {products.length > 0 ? (
               <ul className="mt-4">
@@ -71,7 +71,7 @@ const Search = ({ setIsSearchModal }) => {
                     </li>
                   ))
                 ) : (
-                  <p className="text-center font-semibold">No results found!</p>
+                  <p className="text-center font-semibold">Sonuç bulunamadı!</p>
                 )}
               </ul>
             ) : (

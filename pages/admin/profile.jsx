@@ -1,14 +1,14 @@
-import axios from "axios";
-import Image from "next/image";
-import { useRouter } from "next/router";
+import axios from 'axios';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { useState } from "react";
-import Category from "../../components/admin/Category";
-import Footer from "../../components/admin/Footer";
-import Order from "../../components/admin/Order";
-import Products from "../../components/admin/Products";
-import { toast } from "react-toastify";
-import AddProduct from "../../components/admin/AddProduct";
+import { useState } from 'react';
+import Category from '../../components/admin/Category';
+import Footer from '../../components/admin/Footer';
+import Order from '../../components/admin/Order';
+import Products from '../../components/admin/Products';
+import { toast } from 'react-toastify';
+import AddProduct from '../../components/admin/AddProduct';
 
 const Profile = () => {
   const [tabs, setTabs] = useState(0);
@@ -18,11 +18,11 @@ const Profile = () => {
 
   const closeAdminAccount = async () => {
     try {
-      if (confirm("Are you sure you want to close your Admin Account?")) {
+      if (confirm('Are you sure you want to close your Admin Account?')) {
         const res = await axios.put(`${process.env.NEXT_PUBLIC_API_URL}/admin`);
         if (res.status === 200) {
-          push("/admin");
-          toast.success("Admin Account Closed!");
+          push('/admin');
+          toast.success('Admin Account Closed!');
         }
       }
     } catch (err) {
@@ -46,7 +46,7 @@ const Profile = () => {
         <ul className="text-center font-semibold">
           <li
             className={`border w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 0 && "bg-primary text-white"
+              tabs === 0 && 'bg-primary text-white'
             }`}
             onClick={() => setTabs(0)}
           >
@@ -55,7 +55,7 @@ const Profile = () => {
           </li>
           <li
             className={`border border-t-0 w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 1 && "bg-primary text-white"
+              tabs === 1 && 'bg-primary text-white'
             }`}
             onClick={() => setTabs(1)}
           >
@@ -64,7 +64,7 @@ const Profile = () => {
           </li>
           <li
             className={`border border-t-0 w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 2 && "bg-primary text-white"
+              tabs === 2 && 'bg-primary text-white'
             }`}
             onClick={() => setTabs(2)}
           >
@@ -73,7 +73,7 @@ const Profile = () => {
           </li>
           <li
             className={`border border-t-0 w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 3 && "bg-primary text-white"
+              tabs === 3 && 'bg-primary text-white'
             }`}
             onClick={() => setTabs(3)}
           >
@@ -82,7 +82,7 @@ const Profile = () => {
           </li>
           <li
             className={`border border-t-0 w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 4 && "bg-primary text-white"
+              tabs === 4 && 'bg-primary text-white'
             }`}
             onClick={closeAdminAccount}
           >
@@ -107,11 +107,11 @@ const Profile = () => {
 };
 
 export const getServerSideProps = (ctx) => {
-  const myCookie = ctx.req?.cookies || "";
+  const myCookie = ctx.req?.cookies || '';
   if (myCookie.token !== process.env.ADMIN_TOKEN) {
     return {
       redirect: {
-        destination: "/admin",
+        destination: '/admin',
         permanent: false,
       },
     };

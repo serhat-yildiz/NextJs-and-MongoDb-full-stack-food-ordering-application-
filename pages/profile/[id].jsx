@@ -1,12 +1,12 @@
-import axios from "axios";
-import { signOut, useSession } from "next-auth/react";
-import Image from "next/image";
-import { useRouter } from "next/router";
+import axios from 'axios';
+import { signOut, useSession } from 'next-auth/react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { useEffect, useState } from "react";
-import Account from "../../components/profile/Account";
-import Order from "../../components/profile/Order";
-import Password from "../../components/profile/Password";
+import { useEffect, useState } from 'react';
+import Account from '../../components/profile/Account';
+import Order from '../../components/profile/Order';
+import Password from '../../components/profile/Password';
 
 const Profile = ({ user }) => {
   const { data: session } = useSession();
@@ -14,15 +14,15 @@ const Profile = ({ user }) => {
   const { push } = useRouter();
 
   const handleSignOut = () => {
-    if (confirm("Are you sure you want to sign out?")) {
+    if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
       signOut({ redirect: false });
-      push("/auth/login");
+      push('/auth/login');
     }
   };
 
   useEffect(() => {
     if (!session) {
-      push("/auth/login");
+      push('/auth/login');
     }
   }, [session, push]);
 
@@ -31,7 +31,7 @@ const Profile = ({ user }) => {
       <div className="lg:w-80 w-100 flex-shrink-0">
         <div className="relative flex flex-col items-center px-10 py-5 border border-b-0">
           <Image
-            src={user.image ? user.image : "/images/client2.jpg"}
+            src={user.image ? user.image : '/images/client2.jpg'}
             alt=""
             width={100}
             height={100}
@@ -42,37 +42,37 @@ const Profile = ({ user }) => {
         <ul className="text-center font-semibold">
           <li
             className={`border w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 0 && "bg-primary text-white"
+              tabs === 0 && 'bg-primary text-white'
             }`}
             onClick={() => setTabs(0)}
           >
             <i className="fa fa-home"></i>
-            <button className="ml-1 ">Account</button>
+            <button className="ml-1 ">Hesap</button>
           </li>
           <li
             className={`border border-t-0 w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 1 && "bg-primary text-white"
+              tabs === 1 && 'bg-primary text-white'
             }`}
             onClick={() => setTabs(1)}
           >
             <i className="fa fa-key"></i>
-            <button className="ml-1">Password</button>
+            <button className="ml-1">Şifre</button>
           </li>
           <li
             className={`border border-t-0 w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${
-              tabs === 2 && "bg-primary text-white"
+              tabs === 2 && 'bg-primary text-white'
             }`}
             onClick={() => setTabs(2)}
           >
             <i className="fa fa-motorcycle"></i>
-            <button className="ml-1">Orders</button>
+            <button className="ml-1">Spariş</button>
           </li>
           <li
             className={`border border-t-0 w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all`}
             onClick={handleSignOut}
           >
             <i className="fa fa-sign-out"></i>
-            <button className="ml-1">Exit</button>
+            <button className="ml-1">Çıkış</button>
           </li>
         </ul>
       </div>

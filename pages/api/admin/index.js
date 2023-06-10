@@ -1,37 +1,37 @@
-import cookie from "cookie";
+import cookie from 'cookie';
 
 const handler = (req, res) => {
   const { method } = req;
 
-  if (method === "POST") {
+  if (method === 'POST') {
     const { username, password } = req.body;
     if (
       username === process.env.ADMIN_USERNAME &&
       password === process.env.ADMIN_PASSWORD
     ) {
       res.setHeader(
-        "Set-Cookie",
-        cookie.serialize("token", process.env.ADMIN_TOKEN, {
+        'Set-Cookie',
+        cookie.serialize('token', process.env.ADMIN_TOKEN, {
           maxAge: 60 * 60,
-          sameSite: "strict",
-          path: "/",
+          sameSite: 'strict',
+          path: '/',
         })
       );
-      res.status(200).json({ message: "Success" });
+      res.status(200).json({ message: 'Success' });
     } else {
-      res.status(400).json({ message: "Wrong Credentials" });
+      res.status(400).json({ message: 'Wrong Credentials' });
     }
   }
 
-  if (method === "PUT") {
+  if (method === 'PUT') {
     res.setHeader(
-      "Set-Cookie",
-      cookie.serialize("token", process.env.ADMIN_TOKEN, {
+      'Set-Cookie',
+      cookie.serialize('token', process.env.ADMIN_TOKEN, {
         maxAge: -1,
-        path: "/",
+        path: '/',
       })
     );
-    res.status(200).json({ message: "Success" });
+    res.status(200).json({ message: 'Success' });
   }
 };
 

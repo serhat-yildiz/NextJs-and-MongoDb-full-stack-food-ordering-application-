@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import Title from "../ui/Title";
-import { useSession } from "next-auth/react";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import Title from '../ui/Title';
+import { useSession } from 'next-auth/react';
+import axios from 'axios';
 
 const Order = () => {
   const [orders, setOrders] = useState([]);

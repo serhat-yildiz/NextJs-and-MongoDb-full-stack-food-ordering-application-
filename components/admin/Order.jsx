@@ -1,10 +1,10 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import Title from "../ui/Title";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Title from '../ui/Title';
 
 const Order = () => {
   const [orders, setOrders] = useState([]);
-  const status = ["preparing", "on the way", "delivered"];
+  const status = ['preparing', 'on the way', 'delivered'];
   useEffect(() => {
     const getOrders = async () => {
       try {
@@ -83,7 +83,7 @@ const Order = () => {
                     </td>
 
                     <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
-                      {order?.method === 0 ? "Cash" : "Card"}
+                      {order?.method === 0 ? 'Cash' : 'Card'}
                     </td>
                     <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
                       {status[order?.status]}

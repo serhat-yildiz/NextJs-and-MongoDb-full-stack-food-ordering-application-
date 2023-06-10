@@ -1,20 +1,20 @@
-import Title from "../ui/Title";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { toast } from "react-toastify";
+import Title from '../ui/Title';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
 
   const handleDelete = async (id) => {
     try {
-      if (confirm("Are you sure you want to delete this product?")) {
+      if (confirm('Are you sure you want to delete this product?')) {
         const res = await axios.delete(
           `${process.env.NEXT_PUBLIC_API_URL}/products/${id}`
         );
         if (res.status === 200) {
-          toast.success("Product Deleted!");
+          toast.success('Product Deleted!');
           getProducts();
         }
       }
