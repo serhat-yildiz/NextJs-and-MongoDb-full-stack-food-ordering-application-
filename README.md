@@ -1,3 +1,5 @@
+[marmara-ff.vercel.app
+](https://marmara-ff.vercel.app/)
 Modern Yemek Sipariş Platformu
 
 Bu proje, modern web geliştirme teknolojilerini kullanarak oluşturulmuş bir yemek sipariş platformudur. MongoDB ve Next.js'in gücünden faydalanarak geliştirilmiş bu full-stack uygulama, kullanıcıların yemek siparişi vermesini, restoran sahiplerinin ise siparişleri yönetmesini kolaylaştırır.
