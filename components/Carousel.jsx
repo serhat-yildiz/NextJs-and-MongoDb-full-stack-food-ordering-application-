@@ -38,12 +38,11 @@ const Carousel = () => {
       <Slider {...settings}>
         <div>
           <div className="mt-48 container mx-auto  text-white flex flex-col items-start gap-y-8">
-            <Title addClass="text-5xl">Marmara Uni Fast Food</Title>
+            <Title addClass="text-5xl">YemekExpress - Hızlı Teslimat</Title>
             <p className="text-sm sm:w-2/5 w-full">
-              Araştırma yaparken karnınız mı acıktı? Marmara Üniversitesi Fast
-              Food, lezzetli ve hızlı yemekler sunan birinci sınıf bir
-              seçenektir. Öğrenci dostu menümüz, zengin çeşitliliği ve uygun
-              fiyatlarıyla dikkat çekmektedir.
+              Karnınız mı acıktı? YemekExpress ile lezzetli yemekleri kapınıza kadar getiriyoruz! 
+              Geniş menü seçeneğimiz, hızlı teslimat ve uygun fiyatlarımızla her anınızda yanınızdayız. 
+              Favorilerinizi kolayca sipariş edin ve keyifle tüketin.
             </p>
             <button className="btn-primary">şimdi sipariş ver</button>
           </div>

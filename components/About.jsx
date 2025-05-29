@@ -11,17 +11,16 @@ const About = () => {
           </div>
         </div>
         <div className="md:w-1/2 ">
-          <Title addClass="text-[40px]">Biz Marmara üniversitesiyiz</Title>
+          <Title addClass="text-[40px]">YemekExpress Hakkında</Title>
           <p className="my-5 flex flex-col items-center">
-            Araştırma yaparken karnınız mı acıktı? Marmara Üniversitesi Fast
-            Food, lezzetli ve hızlı yemekler sunan birinci sınıf bir seçenektir.
-            Öğrenci dostu menümüz, zengin çeşitliliği ve uygun fiyatlarıyla
-            dikkat çekmektedir. Kaliteli malzemeler kullanarak hazırlanan
-            menümüzde, hamburgerler, sandviçler, pizzalar, makarnalar ve daha
-            birçok lezzetli seçenek bulunmaktadır. Her damak zevkine hitap eden
-            çeşitler arasında, vegan ve vejetaryen alternatifler de
-            bulunmaktadır. Sağlıklı beslenmeye önem verenler için taze salatalar
-            ve meyve tabakları da sunuyoruz.
+            YemekExpress, modern ve güvenilir bir yemek sipariş platformudur. 
+            Lezzetli ve taze yemekleri en hızlı şekilde kapınıza kadar getiren 
+            ekibimizle hizmet veriyoruz. Geniş menü çeşitliliğimiz ve kaliteli 
+            malzemelerimizle her damak zevkine hitap ediyoruz. Hamburgerler, 
+            pizzalar, makarnalar, salatalar ve daha birçok lezzetli seçeneğimiz 
+            bulunmaktadır. Vegan ve vejetaryen alternatifleriyle sağlıklı 
+            beslenme ihtiyaçlarınızı da karşılıyoruz. YemekExpress ile her öğün 
+            bir zevk haline gelir!
           </p>
           <button className="btn-primary">Devamını oku</button>
         </div>

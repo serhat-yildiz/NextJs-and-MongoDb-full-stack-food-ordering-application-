@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <span className="text-[2rem] font-sans font-bold cursor-pointer">
-        Marmara FF
+        YemekExpress
       </span>
     </Link>
   );

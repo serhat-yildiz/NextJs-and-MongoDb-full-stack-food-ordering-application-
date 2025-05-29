@@ -39,13 +39,13 @@ const Footer = () => {
               <a href={`mailto:${footer?.email}`}>
                 <i className="fa fa-envelope"></i>
                 <span className="inline-block ml-2">
-                  marmarafastfood@gmail.com
+                  info@yemekexpress.com
                 </span>
               </a>
             </div>
           </div>
           <div className="md:flex-1">
-            <Title addClass="text-[38px]">Marmara-Fast-Food</Title>
+            <Title addClass="text-[38px]">YemekExpress</Title>
             <p className="mt-3">{footer?.desc}</p>
             <div className="flex items-center justify-center mt-5 gap-x-2">
               {footer?.socialMedia?.map((item) => (

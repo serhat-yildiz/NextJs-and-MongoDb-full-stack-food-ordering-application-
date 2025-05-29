@@ -1,5 +1,5 @@
 {
-  "name": "darthDevo",
+  "name": "yemek-express",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -38,9 +38,9 @@
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   },
-  "description": "marmara fast food university final project",
+  "description": "Modern yemek sipariş platformu - YemekExpress",
   "main": "index.js",
-  "repository": "https://github.com/darthDevo/Marmara-FF.git",
+  "repository": "https://github.com/darthDevo/YemekExpress.git",
   "author": "Serhat Yıldız <132045435+darthDevo@users.noreply.github.com>",
   "license": "MIT"
 }

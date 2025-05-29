@@ -9,7 +9,7 @@ export default function Index({ categoryList, productList }) {
   return (
     <div className="">
       <Head>
-        <title>Marmara-Fast-Food</title>
+        <title>YemekExpress - Modern Yemek Sipariş Platformu</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

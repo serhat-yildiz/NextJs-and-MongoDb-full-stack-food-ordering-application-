@@ -50,22 +50,37 @@ const Customers = () => {
 
   return (
     <div className="container mx-auto mb-20 mt-12">
-      <Title addClass="text-[40px] text-center">Mükemmel kadromuz</Title>
+      <Title addClass="text-[40px] text-center">Müşteri Yorumları</Title>
       <Slider {...settings}>
         <CustomerItem
-          description="Ercan Erkalkan, genellikle restoran şefine mutfak operasyonlarında destek sağlar. Yemeklerin hazırlanması, sunumu ve kalitesi konularında restoran şefine yardımcı olur. Yemek tariflerinin hazırlanması ve uygulanması konusunda aktif rol alır."
-          imgSrc="/images/client1.jpeg"
-          name={'Ercan Erkalkan'}
+          description="YemekExpress'ten siparişlerim her zaman taze ve lezzetli geliyor. Özellikle pizzaları harika! Hızlı teslimat ve güler yüzlü kurye ekibi için teşekkürler. Kesinlikle tavsiye ederim."
+          name={'Ahmet Kaya'}
+          rating={5}
         />
         <CustomerItem
-          description="Vedat Topuz, restoran müdürü olarak görev yapan bir kişidir. Restoran müdürü olarak, restoranın günlük işleyişini yönetir, personel yönetimi yapar ve müşteri hizmetlerinden sorumludur. Müşteri memnuniyetini sağlamak, kaliteli hizmet sunmak ve restoranın karlılığını artırmak için stratejiler geliştirir ve uygular."
-          imgSrc="/images/client2.png"
-          name={'Vedat Topuz'}
+          description="Ailecek severek kullanıyoruz. Menü çeşitliliği çok geniş, herkesin sevdiği bir şeyler bulabiliyor. Vegan seçenekleri de mükemmel. Fiyatlar da gayet uygun."
+          name={'Zeynep Öztürk'}
+          rating={5}
         />
         <CustomerItem
-          description="Fatih Kazdal, genellikle restoran menüsünü planlar ve yemeklerin lezzetli, estetik ve hijyenik bir şekilde hazırlanmasını sağlar. Mutfak personelinin iş organizasyonunu yönetir, yemeklerin doğru zamanda ve düzgün bir şekilde hazırlanmasını sağlar ve restoranın kalite standartlarını korur."
-          imgSrc="/images/clinet3.jpeg"
-          name={'Fatih Kazdal'}
+          description="İş yerinde öğle aralarında sürekli sipariş veriyoruz. 30 dakikada geldiği söylenen siparişler gerçekten zamanında geliyor. Kalite hiç düşmüyor."
+          name={'Mehmet Şahin'}
+          rating={4}
+        />
+        <CustomerItem
+          description="Hamur işleri konusunda gerçekten başarılılar. Mantı ve börekler ev yapımı gibi lezzetli. Müşteri hizmetleri de çok ilgili ve çözüm odaklı."
+          name={'Fatma Demir'}
+          rating={5}
+        />
+        <CustomerItem
+          description="Öğrenci olarak bütçe dostu menüleri çok beğeniyorum. Porsiyonlar doyurucu ve lezzetli. YemekExpress sayesinde karnım tok kalpim de tok!"
+          name={'Can Yılmaz'}
+          rating={4}
+        />
+        <CustomerItem
+          description="Sağlıklı beslenmeye dikkat ediyorum. Taze salata seçenekleri ve düşük kalorili menüleri ile beklentilerimi karşılıyor. Besin değerleri de belirtilmiş."
+          name={'Elif Aksoy'}
+          rating={5}
         />
       </Slider>
     </div>
