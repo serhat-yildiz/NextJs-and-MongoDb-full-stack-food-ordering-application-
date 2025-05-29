@@ -63,7 +63,7 @@
 
 ### 1. Projeyi klonlayın
 ```bash
-git clone https://github.com/darthDevo/YemekExpress.git
+git clone https://github.com/serhat-yildiz/YemekExpress.git
 cd YemekExpress
 ```
 
